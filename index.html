@@ -1,1 +1,34 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="theme-color" content="#f7f7f5"/><title>GroupMate｜小组协作</title></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f7f5" />
+    <meta name="description" content="GroupMate —— 多人小组作业协作平台：任务分配、进度跟踪、成员管理。" />
+    <!-- 全部图标都用内联 data URI，不请求任何境外 CDN 资源 -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23344c3d'/%3E%3Ctext x='16' y='23' font-size='18' font-family='sans-serif' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E" />
+    <title>GroupMate｜小组协作</title>
+    <style>
+      /* 首屏骨架：不依赖任何外部资源，网络慢时也能立刻看到内容，避免"一直白屏" */
+      html,body{margin:0;background:#f7f7f5}
+      #boot{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+        font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:#8c9389}
+      #boot .mark{width:38px;height:38px;border-radius:12px;background:#344c3d;color:#fff;display:grid;place-items:center;font-weight:700;font-size:19px}
+      #boot .ring{width:24px;height:24px;border:2.5px solid #e2e7e0;border-top-color:#5c7a62;border-radius:50%;animation:bootspin .9s linear infinite}
+      #boot p{margin:0;font-size:12px;letter-spacing:.4px}
+      @keyframes bootspin{to{transform:rotate(360deg)}}
+      /* React 挂载后 #root 不再是空的，骨架自动隐藏 */
+      #root:not(:empty) ~ #boot{display:none}
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="boot">
+      <div class="mark">G</div>
+      <div class="ring"></div>
+      <p>正在打开 GroupMate…</p>
+    </div>
+    <noscript>请开启浏览器的 JavaScript 后再使用 GroupMate。</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
